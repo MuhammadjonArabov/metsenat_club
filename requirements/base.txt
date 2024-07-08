@@ -12,7 +12,7 @@ babel
 bs4
 django-cors-headers
 django-environ
-django-filte
+django-filter
 django-jazzmin
 djangorestframework-simplejwt
 drf-yasg
