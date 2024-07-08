@@ -13,7 +13,6 @@ bs4
 django-cors-headers
 django-environ
 django-filter
-django-jazzmin
 djangorestframework-simplejwt
 drf-yasg
 environ
