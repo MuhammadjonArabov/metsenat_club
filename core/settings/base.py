@@ -16,7 +16,7 @@ env.read_env(".env")
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = env.str("")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG")
@@ -100,7 +100,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": env.str("DB_ENGINE"),
+        "ENGINE": env.str("DB_ENGINE", default='django.db.backends.postgresql_psycopg2'),
         "NAME": env.str("DB_NAME"),
         "USER": env.str("DB_USER"),
         "PASSWORD": env.get_value("DB_PASSWORD"),
@@ -147,7 +147,7 @@ STATIC_ROOT = BASE_DIR / "static"
 STATICFILES_DIRS = (BASE_DIR / "staticfiles",)
 
 # STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'staticfiles'),  # Bu qatordan boshqa
+#     os.path.join(BASE_DIR, 'staticfiles'),
 # ]
 
 MEDIA_URL = "media/"
